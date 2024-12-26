@@ -49,3 +49,26 @@ body {
   align-items: left;
   flex-direction: column;
 }
+
+.title-gallery {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 200px;
+  height: 300px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
