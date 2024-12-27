@@ -4,61 +4,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Portfolio of Salvador Dali, featuring biography, gallery, and contact information.">
+  <meta name="keywords" content="Salvador Dali, portfolio, surrealism, art, gallery">
+  <meta name="author" content="Timur 51771"> 
+
   <title>Salvador Dali</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="./icons/artist-svgrepo-com.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <header id="header" class="header">
+  <header id="header" class="bg-dark text-white text-center py-4">
     <h1 class="name-text">Salvador Dali</h1>
-    <p class="quote-text">Rysunki, sztuka, inspiracja</p>
+    <p class="quote-text">Drawings - Art - Inspiration</p>
   </header>
 
-  <section id="about" class="container about-container">
-    <img class="portrait" src="./imges/main.jpg" alt="Salvador Dali image">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#header">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="description">
-      <h2 class="title">Biography</h2>
-      <p class="about-text">
-        Salvador Dalí, a właściwie Salvador Domingo Felipe Jacinto Dalí i Domènech (1904-1989),
-        był hiszpańskim malarzem surrealistycznym, jednym z najbardziej znanych artystów XX wieku.
-        Urodził się w Figueres, w Katalonii. Jego sztuka charakteryzowała się niezwykłą wyobraźnią,
-        precyzją techniczną i surrealistycznymi motywami,
-        takimi jak "płynące zegary" w słynnym obrazie Trwałość pamięci.
-        Dalí zajmował się również rzeźbą, fotografią, filmem i pisarstwem.
-        Jego ekscentryczna osobowość uczyniła go ikoną popkultury.
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about" class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <a href="https://www.salvador-dali.org/en/artwork/exhibitions/page/6" target="_blank">
+          <img 
+            class="img-fluid rounded" 
+            src="./imges/main.jpg" 
+            alt="Salvador Dali image">
+        </a>
+        
+      </div>
+      <div class="col-md-8">
+        <h2 class="title">Biography</h2>
+        <p>
+          Salvador Dalí, a właściwie Salvador Domingo Felipe Jacinto Dalí i Domènech (1904-1989),
+          był hiszpańskim malarzem surrealistycznym, jednym z najbardziej znanych artystów XX wieku.
+          Urodził się w Figueres, w Katalonii. Jego sztuka charakteryzowała się niezwykłą wyobraźnią,
+          precyzją techniczną i surrealistycznymi motywami, takimi jak "płynące zegary" w słynnym obrazie
+          Trwałość pamięci.
+        </p>
+      </div>
     </div>
   </section>
 
-  <section id="gallery" class="container gallery-container">
-    <h2 class="title-gallery">Gallery</h2>
-    <div class="gallery-grid">
-      <img src="./imges/1.jpg" alt="Galatea of the Spheres">
-      <img src="./imges/2.jpg" alt="The Elephants">
-      <img src="./imges/3.jpg" alt="Galatea of the Spheres">
-      <img src="./imges/4.jpg" alt="The Persistence of Memory">
+  <section id="gallery" class="container my-5">
+    <h2 class="title text-center mb-4">Gallery</h2>
+    <div class="row g-4">
+      <div class="col-sm-6 col-md-4">
+        <div class="image-container">
+          <img 
+            src="./imges/1.jpg" 
+            alt="Galatea of the Spheres" 
+            class="img-fluid rounded shadow">
+
+          <a 
+            href="https://www.dalipaintings.com/galatea-of-the-spheres.jsp"
+            target="_blank" 
+            class="description-overlay">
+            <p>Galatea of the Spheres</p>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="image-container">
+          <img 
+            src="./imges/2.jpg"
+            alt="The Elephants"
+            class="img-fluid rounded shadow">
+
+          <a 
+            href="https://www.dalipaintings.com/elephants.jsp" 
+            target="_blank" 
+            class="description-overlay">
+            <p>The Elephants</p>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="image-container">
+          <img 
+            src="./imges/3.jpg" 
+            alt="Mae West`s Face" 
+            class="img-fluid rounded shadow">
+
+          <a 
+            href="https://www.artic.edu/artworks/65819/mae-west-s-face-which-may-be-used-as-a-surrealist-apartment" 
+            target="_blank"
+            class="description-overlay">
+            <p>Mae West`s Face</p>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12">
+        <div class="image-container">
+          <img 
+            src="./imges/4.jpg" 
+            alt="The Persistence of Memory" 
+            class="img-fluid rounded shadow">
+
+          <a 
+            href="https://www.dalipaintings.com/persistence-of-memory.jsp" 
+            target="_blank" 
+            class="description-overlay">
+            <p>The Persistence of Memory</p>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="container contact-container">
-    <h2 class="title">Contacts</h2>
-    <p>E-mail: 
-      <a>artist@example.com</a>
-    </p>
-    <p>
-      Sieci społecznościowe: 
-      <a href="#">Instagram</a>,
-      <a href="#">Facebook</a>
-    </p>
+  <section id="contact" class="container my-5">
+    <h2 class="title text-center mb-4">Contacts</h2>
+    <div class="text-center">
+      <p>E-mail:
+        <a href="mailto:SalvadorDali@example-gmail.com">SalvadorDali@gmail.com</a>
+      </p>
+      <p>
+        Social networks:
+        <a href="#" class="text-decoration-none">Instagram</a>,
+        <a href="#" class="text-decoration-none">Facebook</a>
+      </p>
+    </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer bg-dark text-white text-center py-3">
     <p>&copy; 2024 Salvador Dali</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

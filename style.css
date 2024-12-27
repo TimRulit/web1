@@ -14,6 +14,31 @@ body {
   color: var(--text-color);
 }
 
+a {
+ color: #fff;
+ text-decoration: none;
+ cursor: pointer;
+}
+
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb)) !important;
+}
+
+.row img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+img {
+  cursor: pointer;
+  transition: scale 0.5s;
+}
+
+.img-fluid:hover {
+  scale: 1.03;
+}
+
 .container {
   margin: 20px auto;
   padding: 20px;
@@ -32,61 +57,9 @@ body {
   justify-content: space-evenly;
 }
 
-.about-container {
-  display: flex;
-}
-
-.portrait {
-  width: 300px;
-  height: 400px;
-  margin-right: 60px;
-  border-radius: 10px;
-}
-
-.description {
-  width: 100%;
-  display: flex;
-  align-items: left;
-  flex-direction: column;
-}
-
-.title-gallery {
+.title {
   text-align: center;
   margin-top: 0px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.gallery-grid img {
-  width: 200px;
-  height: 300px;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
-
-.contact-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 .footer {
@@ -99,4 +72,36 @@ a:hover {
   background: #333;
   color: white;
   margin-top: 20px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.description-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.image-container:hover .description-overlay {
+  opacity: 1;
 }
